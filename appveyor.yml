@@ -25,15 +25,3 @@ build:
 
 test_script:
   - cmd: nunit3-console src\IP.i4o.Tests\DotNetProjects.IndexedLinq.Tests.csproj --result=myresults.xml;format=AppVeyor
-
-#artifacts:
-#  - path: '**\DotNetProjects.Migrator*.nupkg'
-
-#deploy:
-#  provider: NuGet
-#  api_key:
-#    secure: OrhpK2cLXXcoWW+hU6xAv3eeKIbATEFbenteoFsi9EfM1yyDof6ZuNKAsA3Vy6vb
-#  artifact: /.*\.nupkg/
-  
-  
-  
