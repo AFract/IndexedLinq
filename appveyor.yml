@@ -27,6 +27,9 @@ test:
   assemblies:
     only:
       - '**\DotNetProjects.IndexedLinq.Tests.dll'
+
+
+
 #artifacts:
 #  - path: '**\DotNetProjects.Migrator*.nupkg'
 
