@@ -16,6 +16,9 @@ dotnet_csproj:
   informational_version: '{version}'
   
 configuration: Release
+
+before_build:
+  - nuget restore src\IndexedLinq.sln
   
 build:
   project: src\IndexedLinq.sln
