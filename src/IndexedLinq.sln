@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IP.i4o", "IP.i4o\IP.i4o.csproj", "{9A3BD7C7-F8EE-4312-AD67-EF0BD133CB20}"
+# Visual Studio 15
+VisualStudioVersion = 15.0.27924.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetProjects.IndexedLinq", "IP.i4o\DotNetProjects.IndexedLinq.csproj", "{9A3BD7C7-F8EE-4312-AD67-EF0BD133CB20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IP.i4o.Tests", "IP.i4o.Tests\IP.i4o.Tests.csproj", "{1B3D03CE-E906-4AFB-B8C2-1F9AC7114FBB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetProjects.IndexedLinq.Tests", "IP.i4o.Tests\DotNetProjects.IndexedLinq.Tests.csproj", "{1B3D03CE-E906-4AFB-B8C2-1F9AC7114FBB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{8EA50D46-DA09-4492-B46D-F9ABCC3D51D3}"
 	ProjectSection(SolutionItems) = preProject
@@ -27,5 +29,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {474862CF-EA2C-466B-91BF-42F46B6628C8}
 	EndGlobalSection
 EndGlobal

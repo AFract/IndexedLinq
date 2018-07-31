@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net40</TargetFrameworks>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyName>DotNetProjects.IndexedLinq</AssemblyName>
+    <RootNamespace>DotNetProjects.IndexedLinq</RootNamespace>
+  </PropertyGroup>
+
+</Project>
