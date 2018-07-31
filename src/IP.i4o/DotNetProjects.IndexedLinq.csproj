@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net40</TargetFrameworks>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <SignAssembly>True</SignAssembly>
     <AssemblyName>DotNetProjects.IndexedLinq</AssemblyName>
     <RootNamespace>DotNetProjects.IndexedLinq</RootNamespace>
