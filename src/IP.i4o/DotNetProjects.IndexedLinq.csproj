@@ -6,6 +6,10 @@
     <SignAssembly>True</SignAssembly>
     <AssemblyName>DotNetProjects.IndexedLinq</AssemblyName>
     <RootNamespace>DotNetProjects.IndexedLinq</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseUrl>https://www.gnu.org/licenses/old-licenses/lgpl-2.1</PackageLicenseUrl>
+    <PackageProjectUrl></PackageProjectUrl>
+    <RepositoryUrl>https://github.com/dotnetprojects/IndexedLinq</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
