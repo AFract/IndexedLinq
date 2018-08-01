@@ -1,6 +1,5 @@
 using System;
 using System.Reflection;
-using DotNetProjects.IndexedLinq.IP.i4o;
 
 namespace DotNetProjects.IndexedLinq
 {

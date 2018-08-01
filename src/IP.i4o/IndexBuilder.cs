@@ -41,7 +41,7 @@ namespace DotNetProjects.IndexedLinq
 		{
 			return (IIndex<TChild>)
 						 Activator.CreateInstance(
-								 Type.GetType("IP.i4o.ComparisonIndex`2").MakeGenericType(new[] { typeof(TChild), propertyInfo.PropertyType }),
+								 typeof(ComparisonIndex<,>).MakeGenericType(new[] { typeof(TChild), propertyInfo.PropertyType }),
 								 new object[] { enumerable, propertyInfo }
 								 );
 		}
