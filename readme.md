@@ -38,4 +38,4 @@ LINQ queries with equality index: **O(1)**</pre>
 
 ## License
 
-GNU Lesser General Public License (LGPL), Version 3.0, 29 June 2007
+GNU Lesser General Public License (LGPL), Version 2.1
