@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace IP.i4o
+namespace DotNetProjects.IndexedLinq
 {
 	public class IndexSet<T> : IEnumerable<T>
 	{

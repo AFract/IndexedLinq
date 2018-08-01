@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace IP.i4o
+namespace DotNetProjects.IndexedLinq
 {
 	public class IndexLookupFailedException : Exception
 	{

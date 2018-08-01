@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace IP.i4o
+namespace DotNetProjects.IndexedLinq
 {
 	/// <summary>
 	/// Extensions class for the generic SortedList.

@@ -1,10 +1,10 @@
-﻿using NUnit.Framework;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using NUnit.Framework;
 
-namespace IP.i4o.Tests
+namespace DotNetProjects.IndexedLinq.Tests
 {
 	public class ObservableObject : INotifyPropertyChanged
 	{

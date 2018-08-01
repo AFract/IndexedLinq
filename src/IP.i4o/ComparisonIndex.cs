@@ -5,7 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace IP.i4o
+namespace DotNetProjects.IndexedLinq
 {
 	public class ComparisonIndex<TChild, TProperty> : IIndex<TChild>
 			where TProperty : IComparable

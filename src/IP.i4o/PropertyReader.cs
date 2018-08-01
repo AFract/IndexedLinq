@@ -1,9 +1,8 @@
-using IP.i4o;
-using IP.i4o.IP.i4o;
 using System;
 using System.Reflection;
+using DotNetProjects.IndexedLinq.IP.i4o;
 
-namespace IP.i4o
+namespace DotNetProjects.IndexedLinq
 {
 	public enum PropertyReadStrategy
 	{

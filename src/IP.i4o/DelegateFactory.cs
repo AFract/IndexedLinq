@@ -2,7 +2,7 @@
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace IP.i4o
+namespace DotNetProjects.IndexedLinq
 {
 	namespace IP.i4o
 	{

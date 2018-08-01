@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
 
-namespace IP.i4o
+namespace DotNetProjects.IndexedLinq
 {
 	public static class IndexBuilder
 	{

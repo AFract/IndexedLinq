@@ -1,11 +1,11 @@
-using NUnit.Framework;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using NUnit.Framework;
 
-namespace IP.i4o.Tests
+namespace DotNetProjects.IndexedLinq.Tests
 {
 	public class TestClass
 	{

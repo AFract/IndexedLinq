@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace IP.i4o.Tests
+namespace DotNetProjects.IndexedLinq.Tests
 {
 	internal class ProfilingComparer<T> : IComparer<T>
 	{

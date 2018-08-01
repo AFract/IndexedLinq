@@ -1,10 +1,10 @@
-namespace IP.i4o.Tests
-{
-	using NUnit.Framework;
-	using System;
-	using System.Collections;
+using System;
+using System.Collections;
+using NUnit.Framework;
 
-	public delegate object MethodThatThrows();
+namespace DotNetProjects.IndexedLinq.Tests.TestHelpers
+{
+    public delegate object MethodThatThrows();
 
 	public static partial class FluentSpecificationExtensions
 	{

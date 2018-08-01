@@ -1,10 +1,11 @@
-using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using DotNetProjects.IndexedLinq.Tests.TestHelpers;
+using NUnit.Framework;
 
-namespace IP.i4o.Tests
+namespace DotNetProjects.IndexedLinq.Tests
 {
 	[TestFixture]
 	public class PropertyReaderTests

@@ -1,6 +1,4 @@
-﻿using System.Globalization;
-
-namespace IP.i4o
+﻿namespace DotNetProjects.IndexedLinq
 {
 	internal static class StringExtensions
 	{

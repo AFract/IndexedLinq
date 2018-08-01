@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq.Expressions;
 
-namespace IP.i4o
+namespace DotNetProjects.IndexedLinq
 {
 	internal static class ExpressionExtensions
 	{

@@ -1,7 +1,8 @@
-﻿using NUnit.Framework;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using DotNetProjects.IndexedLinq.Tests.TestHelpers;
+using NUnit.Framework;
 
-namespace IP.i4o.Tests
+namespace DotNetProjects.IndexedLinq.Tests
 {
 	[TestFixture(Description = "SortedList Tests")]
 	public class SortedListTests
