@@ -18,7 +18,8 @@ namespace DotNetProjects.IndexedLinq
             if (property == null)
                 throw new ArgumentNullException("property");
 
-            var method = typeof(T).GetMethod("get_" + property.Name, Type.EmptyTypes);
+				var method = typeof(T).GetMethod("get_" + property.Name, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance,
+                    null, CallingConventions.Standard, Type.EmptyTypes, null);
 
             return Create(method);
         }
