@@ -74,8 +74,7 @@ namespace DotNetProjects.IndexedLinq.Tests
 		[Test]
 		[TestCase(10, PropertyReadStrategy.Reflection)]
 		[TestCase(250, PropertyReadStrategy.Reflection)]
-		[TestCase(450, PropertyReadStrategy.DelegateMethod)]
-		[TestCase(1000, PropertyReadStrategy.DelegateMethod)]
+		[TestCase(10000, PropertyReadStrategy.DelegateMethod)]
 		[Explicit]
 		public void Property_read_strategy_perf_test(int max, PropertyReadStrategy expectedToBeFaster)
 		{
