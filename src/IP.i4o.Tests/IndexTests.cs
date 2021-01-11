@@ -271,13 +271,13 @@ namespace DotNetProjects.IndexedLinq.Tests
 
             var rnd = new Random();
 
-            var moreItems = Enumerable.Range(1, 200000).Select(r => new SimpleClass() { Name = "AdrBla" + rnd.NextDouble(), Age = rnd.Next(0, 100), FavoriteColor = new Color(rnd.Next(0, 0xFFFFFF)) });
+            var moreItems = Enumerable.Range(1, 100000).Select(r => new SimpleClass() { Name = "AdrBla" + rnd.NextDouble(), Age = rnd.Next(0, 100), FavoriteColor = new Color(rnd.Next(0, 0xFFFFFF)) });
 
             someItems.AddRange(moreItems);
 
             someItems = someItems.OrderBy(r => rnd.Next()).ToList(); // Shuffle items
 
-            Assert.AreEqual(200004, someItems.Count());
+            Assert.AreEqual(100004, someItems.Count());
 
             Console.WriteLine("Arrange test list : " + globalSw.ElapsedMilliseconds);
 
@@ -295,41 +295,52 @@ namespace DotNetProjects.IndexedLinq.Tests
 
             Stopwatch sw = new Stopwatch();
 
+            // Search a 1000 times in index
+
             globalSw.Start();
             for (int i = 0; i < 1000; i++)
             {
                 sw.Start();
 
-                var inIndexSearch = theIndexSet.Where(item => item.Age < 25 && item.Name == "Adriana Erickson");
+                var inIndexSearch = theIndexSet.Where(item => item.Age == 13 && item.Name == "Adriana Erickson");
                 Assert.AreEqual(1, inIndexSearch.Count());
 
-                //sw.Stop();
+                sw.Stop();
+
+                if (i == 0)
+                    Console.WriteLine("In index (first iteration) : " + sw.ElapsedMilliseconds);
+
+                if (i == 1)
+                    Console.WriteLine("In index (second iteration) : " + sw.ElapsedMilliseconds);
+
                 //Console.WriteLine("In index : " + sw.ElapsedMilliseconds);
 
                 sw.Reset();
             }
 
-            Console.WriteLine("In index Global : " + globalSw.ElapsedMilliseconds);
+            Console.WriteLine("In index global time : " + globalSw.ElapsedMilliseconds);
 
             globalSw.Reset();
 
             sw.Reset();
 
+            // Search a 1000 times in list
+
             globalSw.Start();
             for (int i = 0; i < 1000; i++)
             {
                 sw.Start();
-                var inListSearch = someItems.Where(item => item.Age < 25 && item.Name == "Adriana Erickson");
+                var inListSearch = someItems.Where(item => item.Age == 13 && item.Name == "Adriana Erickson");
                 Assert.AreEqual(1, inListSearch.Count());
 
-                //sw.Stop();
+                sw.Stop();
                 //Console.WriteLine("In list : " + sw.ElapsedMilliseconds);
                 sw.Reset();
             }
 
-            Console.WriteLine("In list Global : " + globalSw.ElapsedMilliseconds);
-            
-            
+            Console.WriteLine("In list global time : " + globalSw.ElapsedMilliseconds);
+
+
         }
     }
 
