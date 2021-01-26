@@ -285,9 +285,14 @@ namespace DotNetProjects.IndexedLinq.Tests
 
             var indexSpec = IndexSpecification<SimpleClass>.Build()
                 .With(person => person.Name)
-                    .And(person => person.Age)/*
-                    .And(person => person.FavoriteColor)*/;
+                .With(person => person.Age);
+
             var theIndexSet = new IndexSet<SimpleClass>(someItems, indexSpec);
+
+            theIndexSet.UnableToUseIndex += (e, args) =>
+            {
+                throw new Exception(args.Message);
+            };
 
             Console.WriteLine("Define index : " + globalSw.ElapsedMilliseconds);
 

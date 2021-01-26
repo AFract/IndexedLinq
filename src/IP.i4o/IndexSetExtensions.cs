@@ -30,7 +30,12 @@ namespace DotNetProjects.IndexedLinq
 				case ExpressionType.Equal:
 					return indexSet.WhereUsingIndex(predicate);
 				default:
-					return Enumerable.Where(indexSet, predicate.Compile());
+					{
+						// Raise event about missing or unusable index due to non supported predicate
+						indexSet.OnUnableToUseIndex(new IndexEventArgs<T>(predicate));
+
+						return Enumerable.Where(indexSet, predicate.Compile());
+					}
 			}
 		}
 

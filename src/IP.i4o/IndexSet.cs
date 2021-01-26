@@ -54,6 +54,10 @@ namespace DotNetProjects.IndexedLinq
 					LeftSideMemberIsIndexed(predicate)
 				 )
 				return IndexDictionary[LeftSide(predicate).Member.Name].WhereThroughIndex(predicate);
+
+			// Raise event about missing or unusable index due to non supported predicate
+			// TODO : verify in which case the "return IndexDictionary.First().Value.Where(predicate.Compile());" is actually invoked !
+			OnUnableToUseIndex(new IndexEventArgs<T>(predicate));
 			return IndexDictionary.First().Value.Where(predicate.Compile());
 		}
 
@@ -83,5 +87,25 @@ namespace DotNetProjects.IndexedLinq
 		{
 			return (predicate.Body is BinaryExpression);
 		}
+
+
+		public event EventHandler<IndexEventArgs<T>> UnableToUseIndex;
+		protected internal virtual void OnUnableToUseIndex(IndexEventArgs<T> e)
+		{
+			var handler = UnableToUseIndex;
+			handler?.Invoke(this, e);
+		}
+	}
+
+	public class IndexEventArgs<T> :EventArgs
+    {
+		public Expression<Func<T, bool>> Predicate { get; }
+		public string Message { get; }
+        public IndexEventArgs(Expression<Func<T, bool>> predicate)
+        {
+			Predicate = predicate;
+			Message = "Unable to use index for predicate or missing index ! Predicate : " + Predicate?.ToString();
+		}
+
 	}
 }
